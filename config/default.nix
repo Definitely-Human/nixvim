@@ -1,10 +1,9 @@
 {
   # Import all your configuration modules here
-  imports = [ 
+  imports = [
     ./bufferline.nix
-    ./options.nix 
+    ./options.nix
   ];
-  
 
   colorschemes.onedark.enable = true;
 
@@ -16,7 +15,7 @@
     enable = true;
 
     servers = {
-      tsserver.enable = true;
+      #      tsserver.enable = true;
 
       lua-ls.enable = true;
 
@@ -28,10 +27,9 @@
     enable = true;
     autoEnableSources = true;
     sources = [
-      { name = "nvim_lsp"; }
-      { name = "path"; }
-      { name = "buffer"; }
+      {name = "nvim_lsp";}
+      {name = "path";}
+      {name = "buffer";}
     ];
-    
   };
 }
