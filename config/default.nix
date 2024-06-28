@@ -1,26 +1,18 @@
 {
   # Import all your configuration modules here
   imports = [
-    ./bufferline.nix
+    ./plug
+    ./binds.nix
     ./options.nix
   ];
+
+  viAlias = true;
+  vimAlias = true;
 
   colorschemes.onedark.enable = true;
 
   plugins = {
     lualine.enable = true;
-  };
-
-  plugins.lsp = {
-    enable = true;
-
-    servers = {
-      #      tsserver.enable = true;
-
-      lua-ls.enable = true;
-
-      nil-ls.enable = true;
-    };
   };
 
   plugins.cmp.settings = {
